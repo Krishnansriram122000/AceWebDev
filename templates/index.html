@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Ace Web Dev</title>
+ <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ <style>
+  .linkcolor{
+    color:green;
+  }
+  .ielts{
+        font-family: 'Montserrat', sans-serif;
+    }
+    a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  .back{
+    background-color:#CFF2F9;
+  }
+  .aligned{
+    text-align: justify;
+  }
+  .buton3 {border-radius: 8px;
+            font-size:35px;
+            }
+  input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid blue;
+  background-color:#CFF2F9;
+}
+input[type=password] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid blue;
+  background-color:#CFF2F9;
+}
+ </style>
+{% endblock %}
+
+{% block body %}
+<br><br><br>
+<div class="text-center ielts">
+	<h1>Check-Out</h1>
+</div>
+<div class="container ielts">
+  <div class="text-center back jumbotron">
+    <h2>Contact Information</h2>
+        <form action="/" method="POST">
+        
+        Email<br>	<input type="text" name="krish" id="krish"><br>
+        {% if tasks[0] == 1 %}enter a proper mail id{% endif %}<br>
+        Phone<br>	<input type="password"  name="krish2" id="krish2"><br>
+        {% if tasks[1] == 1 %}phone number must contain only numbers<br>{% endif %}
+        {% if tasks[1] == 2 %}10 numbers needed<br>{% endif %}<br>
+        
+    <h2>Shipping Information</h2>
+    <br>
+    Fullname<br> <input type="text" name="fullname" id="fullname"><br><br>
+    Address<br><input type="text" name="address" id="address"><br><br>
+    City<br><input type="text" name="city" id="city"><br><br>
+    Country<br><input type="text" name="country" id="country"><br>postcode<br><input type="text" name="pc" id="pc"><br>
+    <input type="submit" class="m-5 btn-primary buton3 " value="Continue">
+
+    </form>
+    </div></div>
+{% endblock %}

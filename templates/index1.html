@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Ace Web Dev</title>
+ <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ <style>
+  .linkcolor{
+    color:green;
+  }
+  .ielts{
+        font-family: 'Montserrat', sans-serif;
+    }
+    a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  .back{
+    background-color:#CFF2F9;
+  }
+  .aligned{
+    text-align: justify;
+  }
+  input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid blue;
+  background-color:#CFF2F9;
+}
+input[type=password] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid blue;
+  background-color:#CFF2F9;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<br><br><br>
+<div class="container ielts">
+  <div class="text-center back jumbotron">
+<div class="text-center">
+	<h1>Check-Out Successful</h1><br><h1>Details</h1>
+</div><br>
+<div class="ielts">
+{% for task in tasks %}
+<h6>{{ task }}</h6><br>
+{% endfor %}
+</div></div></div>
+{% endblock %}
